@@ -31,12 +31,9 @@ jobs:
     - name: Create Tunnel
       run: Start-Process Powershell -ArgumentList '-Noexit -Command ".\ngrok\ngrok.exe tcp 3389"'
 
-    - name: Connect to RDP [By @Rushidhar1999]
+    - name: Connect to RDP
       run: cmd /c start.bat
 
-    - name: Install Winrar
-      run: cmd /c C:\Users\Public\Desktop\winrar.exe winrar.exe /s
-      
     - name: TimeCount
       run: |
         Invoke-WebRequest https://raw.githubusercontent.com/khanhminhpro/test1/main/resources/loop.ps1 -OutFile loop.ps1
